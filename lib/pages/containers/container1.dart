@@ -22,7 +22,8 @@ class _Container1State extends State<Container1> {
 
   // ================== MOBILE ==================
   Widget mobileContainer1() {
-    return SafeArea(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
           //image
@@ -52,7 +53,7 @@ class _Container1State extends State<Container1> {
               Text(
                 'Helps you to organize your income and expenses',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.grey[400], fontSize: 20),
+                style: TextStyle(color: Colors.grey[400], fontSize: w!/30),
               ),
               SizedBox(height: 20),
               SizedBox(
@@ -67,11 +68,11 @@ class _Container1State extends State<Container1> {
                   label: Text('Try free Demo'),
                 ),
               ),
-
+      
               SizedBox(height: 20),
               Text(
-                '— Web, iOs and Android',
-                style: TextStyle(color: Colors.grey[400], fontSize: 20),
+                'Web, iOs and Android',
+                style: TextStyle(color: Colors.grey[400], fontSize:  w!/30),
               ),
             ],
           ),
@@ -82,7 +83,8 @@ class _Container1State extends State<Container1> {
 
 // ================== TABLET ==================
   Widget tabletContainer1() {
-    return SafeArea(
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
           //image
@@ -113,7 +115,7 @@ class _Container1State extends State<Container1> {
               Text(
                 'Helps you to organize your income and expenses',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.grey[400], fontSize: 20),
+                style: TextStyle(color: Colors.grey[400], fontSize: w!/40),
               ),
               SizedBox(height: 20),
               Padding(
@@ -139,7 +141,7 @@ class _Container1State extends State<Container1> {
                     SizedBox(height: 20),
                     Text(
                       '— Web, iOs and Android',
-                      style: TextStyle(color: Colors.grey[400], fontSize: 20),
+                      style: TextStyle(color: Colors.grey[400], fontSize: w!/40),
                     ),
                   ],
                 ),
