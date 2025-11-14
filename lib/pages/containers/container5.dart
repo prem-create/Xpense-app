@@ -42,12 +42,16 @@ class _Container5State extends State<Container5> {
 
   // ================== DESKTOP ==================
   Widget desktopContainer5() {
-    return commonContainerDesktop(
-      'Use anytime',
-      'Use anytime when you need',
-      'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim ipsum, amet quis ullamcorper eget ut.',
-      container5,
-      false,
+    return Column(
+      children: [
+        commonContainerDesktop(
+          'Use anytime',
+          'Use anytime when you need',
+          'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim ipsum, amet quis ullamcorper eget ut.',
+          container5,
+          false,
+        ),
+      ],
     );
   }
 }
