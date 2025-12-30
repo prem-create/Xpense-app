@@ -47,6 +47,7 @@ class _Container1State extends State<Container1> {
                   fontSize: w! / 8,
                   fontWeight: FontWeight.bold,
                   height: 1.2,
+                  color: Colors.black
                 ),
               ),
               SizedBox(height: 20),
@@ -109,6 +110,7 @@ class _Container1State extends State<Container1> {
                   fontSize: w! / 9.0,
                   fontWeight: FontWeight.bold,
                   height: 1.2,
+                  color: Colors.black
                 ),
               ),
               SizedBox(height: 20),
@@ -169,6 +171,7 @@ class _Container1State extends State<Container1> {
                     fontSize: w! / 20,
                     fontWeight: FontWeight.bold,
                     height: 1.2,
+                    color: Colors.black
                   ),
                 ),
                 SizedBox(height: 20),
