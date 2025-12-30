@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'xpense',
+      title: 'Hackxios', 
       theme: ThemeData(
         fontFamily: 'HindSiliguri',
         useMaterial3: false,

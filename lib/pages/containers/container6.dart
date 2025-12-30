@@ -13,10 +13,139 @@ class Container6 extends StatefulWidget {
 class _Container6State extends State<Container6> {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout.builder(desktop: (context) => desktopContainer6());
+    return ScreenTypeLayout.builder(
+      desktop: (context) => desktopContainer6(),
+      tablet: (context) => tabletContainer6(),
+      mobile: (context) => mobileContainer6(),
+    );
   }
 }
 
+// ================== MOBILE ==================
+Widget mobileContainer6() {
+  return Container(
+    color: Colors.white,
+    child: Column(
+      children: [
+        SizedBox(height: 60),
+        SizedBox(
+          width: w! / 1.5,
+          child: Text(
+            'The Product we work with.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: w! / 10,
+              height: 1.1,
+              color: Colors.black,
+            ),
+          ),
+        ),
+        SizedBox(height: 20),
+        SizedBox(
+          width: w! / 2,
+          child: Text(
+            'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim aumsan nisi, tincidunt vel. Enim ipsum, at quis ullamcorper eget ut.',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.grey[400], fontSize: w! / 40),
+          ),
+        ),
+        SizedBox(height: 60),
+        Center(
+          child: SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                MyCard(
+                  headline: 'Cross platform',
+                  height: 200,
+                  icon: Icon(Icons.devices, color: Colors.orange),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+                MyCard(
+                  headline: 'Cloud Server',
+                  height: 200,
+                  icon: Icon(Icons.cloud, color: Colors.purple),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+                MyCard(
+                  headline: 'Pure JavaScript',
+                  height: 200,
+                  icon: Icon(Icons.backpack_outlined, color: Colors.blue),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+// ================== TABLET ==================
+Widget tabletContainer6() {
+  return Container(
+    color: Colors.white,
+    child: Column(
+      children: [
+        SizedBox(height: 60),
+        SizedBox(
+          width: w! / 1.5,
+          child: Text(
+            'The Product we work with.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: w! / 10,
+              height: 1.1,
+              color: Colors.black,
+            ),
+          ),
+        ),
+        SizedBox(height: 20),
+        SizedBox(
+          width: w! / 2,
+          child: Text(
+            'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim aumsan nisi, tincidunt vel. Enim ipsum, at quis ullamcorper eget ut.',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.grey[400], fontSize: w! / 40),
+          ),
+        ),
+        SizedBox(height: 60),
+        Center(
+          child: SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                MyCard(
+                  headline: 'Cross platform',
+                  height: 300,
+                  icon: Icon(Icons.devices, color: Colors.orange),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+                MyCard(
+                  headline: 'Cloud Server',
+                  height: 300,
+                  icon: Icon(Icons.cloud, color: Colors.purple),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+                MyCard(
+                  headline: 'Pure JavaScript',
+                  height: 300,
+                  icon: Icon(Icons.backpack_outlined, color: Colors.blue),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+// ================== DESKTOP ==================
 Widget desktopContainer6() {
   return Container(
     color: Colors.white,
@@ -33,7 +162,10 @@ Widget desktopContainer6() {
                 child: Text(
                   'The Product we work with.',
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: w! / 20,
+                  ),
                 ),
               ),
               SizedBox(
@@ -41,7 +173,7 @@ Widget desktopContainer6() {
                 child: Text(
                   'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim aumsan nisi, tincidunt vel. Enim ipsum, at quis ullamcorper eget ut.',
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.grey[400], fontSize: 18),
+                  style: TextStyle(color: Colors.grey[400], fontSize: w! / 50),
                 ),
               ),
             ],
@@ -49,28 +181,30 @@ Widget desktopContainer6() {
         ),
         SizedBox(height: 60),
         Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyExpendedCard(
-                headline: 'Cross platform',
-                height: 250,
-                icon: Icon(Icons.devices, color: Colors.orange),
-                subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
-              ),
-              MyExpendedCard(
-                headline: 'Cloud Server',
-                height: 250,
-                icon: Icon(Icons.cloud, color: Colors.purple),
-                subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
-              ),
-              MyExpendedCard(
-                headline: 'Pure JavaScript',
-                height: 250,
-                icon: Icon(Icons.backpack_outlined, color: Colors.blue),
-                subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                MyCard(
+                  headline: 'Cross platform',
+                  height: 300,
+                  icon: Icon(Icons.devices, color: Colors.orange),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+                MyCard(
+                  headline: 'Cloud Server',
+                  height: 300,
+                  icon: Icon(Icons.cloud, color: Colors.purple),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+                MyCard(
+                  headline: 'Pure JavaScript',
+                  height: 300,
+                  icon: Icon(Icons.backpack_outlined, color: Colors.blue),
+                  subline: 'Elit esse cillum dolore eu fugiat nulla pariatur',
+                ),
+              ],
+            ),
           ),
         ),
       ],
